@@ -1,160 +1,238 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+/* =========================================
+   UNIMART WELCOME SCREEN
+========================================= */
 
-    <meta
-        name="viewport"
-        content="width=device-width,
-        initial-scale=1.0,
-        maximum-scale=1.0,
-        user-scalable=no"
-    >
+document.addEventListener("DOMContentLoaded", function () {
 
-    <title>UniMart</title>
+    /* Get buttons */
+    const getStarted =
+        document.getElementById("getStarted");
 
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<div class="phone">
-
-    <!-- =================================
-         TOP STATUS BAR
-    ================================== -->
-
-    <div class="status-bar">
-
-        <span class="time">9:41</span>
-
-        <div class="status-icons">
-            <span class="signal">•••</span>
-            <span class="wifi">⌁</span>
-            <span class="battery">▭</span>
-        </div>
-
-    </div>
+    const loginBtn =
+        document.getElementById("loginBtn");
 
 
-    <!-- =================================
-         TOP BACKGROUND
-    ================================== -->
+    /* =========================================
+       GET STARTED
+    ========================================= */
 
-    <div class="top-peach"></div>
+    getStarted.addEventListener("click", function () {
 
-    <div class="top-green"></div>
+        window.location.href = "login.html";
 
-
-    <!-- =================================
-         NOTCH
-    ================================== -->
-
-    <div class="notch"></div>
+    });
 
 
-    <!-- =================================
-         MAIN CONTENT
-    ================================== -->
+    /* =========================================
+       LOGIN
+    ========================================= */
 
-    <main class="welcome">
+    loginBtn.addEventListener("click", function () {
 
+        window.location.href = "login.html";
 
-        <!-- STORE LOGO -->
+    });
 
-        <div class="store-logo">
+});
+// UniMart welcome page - script.js
+// Palitan ang mga file name sa ibaba kung iba ang pangalan ng pages mo.
 
-            <div class="roof">
+document.getElementById("getStarted").addEventListener("click", function () {
+  window.location.href = "register.html";
+});
 
-                <div class="roof-piece yellow"></div>
-                <div class="roof-piece orange"></div>
-                <div class="roof-piece yellow"></div>
-                <div class="roof-piece orange"></div>
-                <div class="roof-piece yellow"></div>
+document.getElementById("loginBtn").addEventListener("click", function () {
+  window.location.href = "login.html";
+});
+/* =================================
+   HAMBURGER MENU
+================================= */
 
-            </div>
-
-            <div class="store-body">
-
-                <div class="cart-icon">
-
-                    <div class="cart-basket">
-                        🛒
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
+const menuBtn = document.getElementById("menuBtn");
+const sideMenu = document.getElementById("sideMenu");
+const closeMenu = document.getElementById("closeMenu");
+const menuOverlay = document.getElementById("menuOverlay");
 
 
-        <!-- =================================
-             BRAND
-        ================================== -->
+/* OPEN MENU */
 
-        <div class="brand">
+menuBtn.addEventListener("click", function () {
 
-            <span class="uni">Uni</span>
-            <span class="mart">Mart</span>
+    sideMenu.classList.add("active");
+    menuOverlay.classList.add("active");
 
-        </div>
+});
 
 
-        <!-- =================================
-             TAGLINE
-        ================================== -->
+/* CLOSE MENU */
 
-        <div class="tagline">
+closeMenu.addEventListener("click", function () {
 
-            <div>Maliit na Tindahan,</div>
+    sideMenu.classList.remove("active");
+    menuOverlay.classList.remove("active");
 
-            <div>Malaking Solusyon!</div>
-
-        </div>
+});
 
 
-        <!-- =================================
-             BUTTONS
-        ================================== -->
+/* CLOSE WHEN CLICKING OUTSIDE */
 
-        <div class="actions">
+menuOverlay.addEventListener("click", function () {
 
-            <button
-                id="getStarted"
-                class="get-started"
-            >
-                Get Started
-            </button>
+    sideMenu.classList.remove("active");
+    menuOverlay.classList.remove("active");
+
+});
 
 
-            <button
-                id="loginBtn"
-                class="login-button"
-            >
-                I already have an account
-            </button>
+/* =================================
+   ABOUT DEVELOPER
+================================= */
 
-        </div>
+const aboutDeveloper =
+    document.getElementById("aboutDeveloper");
 
+const developerModal =
+    document.getElementById("developerModal");
 
-    </main>
+const closeDeveloper =
+    document.getElementById("closeDeveloper");
 
-
-    <!-- =================================
-         BOTTOM DESIGN
-    ================================== -->
-
-    <div class="bottom-yellow"></div>
-
-    <div class="bottom-peach"></div>
-
-    <div class="bottom-green"></div>
-
-</div>
+const doneDeveloper =
+    document.getElementById("doneDeveloper");
 
 
-<script src="script.js"></script>
+/* OPEN ABOUT DEVELOPER */
 
-</body>
-</html>s
+aboutDeveloper.addEventListener("click", function () {
+
+    sideMenu.classList.remove("active");
+    menuOverlay.classList.remove("active");
+
+    developerModal.classList.add("active");
+
+});
+
+
+/* CLOSE ABOUT DEVELOPER */
+
+closeDeveloper.addEventListener("click", function () {
+
+    developerModal.classList.remove("active");
+
+});
+
+
+/* DONE BUTTON */
+
+doneDeveloper.addEventListener("click", function () {
+
+    developerModal.classList.remove("active");
+
+});
+
+
+/* CLOSE MODAL WHEN CLICKING OUTSIDE */
+
+developerModal.addEventListener("click", function (event) {
+
+    if (event.target === developerModal) {
+
+        developerModal.classList.remove("active");
+
+    }
+/* =================================
+   HAMBURGER MENU
+================================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const sideMenu = document.getElementById("sideMenu");
+const closeMenu = document.getElementById("closeMenu");
+const menuOverlay = document.getElementById("menuOverlay");
+
+menuBtn.addEventListener("click", function () {
+
+    sideMenu.classList.add("active");
+    menuOverlay.classList.add("active");
+
+});
+
+
+/* CLOSE MENU */
+
+closeMenu.addEventListener("click", function () {
+
+    sideMenu.classList.remove("active");
+    menuOverlay.classList.remove("active");
+
+});
+
+
+/* CLICK OUTSIDE */
+
+menuOverlay.addEventListener("click", function () {
+
+    sideMenu.classList.remove("active");
+    menuOverlay.classList.remove("active");
+
+});
+
+
+/* =================================
+   ABOUT DEVELOPER
+================================= */
+
+const aboutDeveloper =
+    document.getElementById("aboutDeveloper");
+
+const developerModal =
+    document.getElementById("developerModal");
+
+const closeDeveloper =
+    document.getElementById("closeDeveloper");
+
+const doneDeveloper =
+    document.getElementById("doneDeveloper");
+
+
+/* OPEN DEVELOPER */
+
+aboutDeveloper.addEventListener("click", function () {
+
+    sideMenu.classList.remove("active");
+    menuOverlay.classList.remove("active");
+
+    developerModal.classList.add("active");
+
+});
+
+
+/* CLOSE DEVELOPER */
+
+closeDeveloper.addEventListener("click", function () {
+
+    developerModal.classList.remove("active");
+
+});
+
+
+/* DONE */
+
+doneDeveloper.addEventListener("click", function () {
+
+    developerModal.classList.remove("active");
+
+});
+
+
+/* CLICK OUTSIDE DEVELOPER */
+
+developerModal.addEventListener("click", function (event) {
+
+    if (event.target === developerModal) {
+
+        developerModal.classList.remove("active");
+
+    }
+
+});
+});
