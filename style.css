@@ -1,0 +1,254 @@
+/* UniMart welcome page - style.css */
+
+:root{
+  --green:#0b5a3a;
+  --orange:#f28a32;
+  --yellow:#f7b731;
+  --cream:#fdf6ea;
+  --peach:#fbd9b5;
+  --mint:#dcebd0;
+  --ink:#1d3a2b;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;
+}
+
+html,body{
+  width:100%;
+  min-height:100%;
+  background:#eceae4;
+  font-family:"Nunito","Poppins","Segoe UI",Arial,sans-serif;
+  color:var(--ink);
+}
+
+body{
+  display:flex;
+  justify-content:center;
+}
+
+button{
+  font-family:inherit;
+  cursor:pointer;
+  border:0;
+}
+
+/* PHONE FRAME */
+
+.phone{
+  position:relative;
+  width:100%;
+  max-width:480px;
+  min-height:100vh;
+  min-height:100dvh;
+  background:var(--cream);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+
+/* the design has no fake status bar or notch */
+.status-bar,
+.notch{
+  display:none;
+}
+
+/* BACKGROUND BLOBS */
+
+.top-green,
+.top-peach,
+.bottom-yellow,
+.bottom-peach,
+.bottom-green{
+  position:absolute;
+  border-radius:50%;
+  pointer-events:none;
+  z-index:0;
+}
+
+.top-green{
+  width:230px;
+  height:230px;
+  top:-70px;
+  right:-80px;
+  background:var(--mint);
+}
+
+.top-peach{
+  width:150px;
+  height:150px;
+  top:40px;
+  right:-70px;
+  background:var(--peach);
+  opacity:.8;
+}
+
+.bottom-yellow{
+  width:240px;
+  height:240px;
+  left:-120px;
+  bottom:150px;
+  background:#fde2a6;
+}
+
+.bottom-peach{
+  width:200px;
+  height:200px;
+  left:-60px;
+  bottom:-90px;
+  background:var(--peach);
+}
+
+.bottom-green{
+  width:230px;
+  height:230px;
+  right:-100px;
+  bottom:-70px;
+  background:var(--mint);
+}
+
+/* CONTENT */
+
+.welcome{
+  position:relative;
+  z-index:1;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:64px 24px 40px;
+  text-align:center;
+}
+
+/* STORE LOGO */
+
+.store-logo{
+  width:150px;
+  margin-bottom:18px;
+}
+
+.roof{
+  display:flex;
+  height:42px;
+  border-radius:12px 12px 0 0;
+  overflow:hidden;
+}
+
+.roof-piece{
+  flex:1;
+  border-radius:0 0 14px 14px;
+}
+
+.roof-piece.yellow{
+  background:var(--yellow);
+}
+
+.roof-piece.orange{
+  background:var(--orange);
+}
+
+.store-body{
+  width:124px;
+  height:70px;
+  margin:-4px auto 0;
+  background:var(--green);
+  border-radius:0 0 12px 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.cart-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* turn the emoji into a white cart icon */
+.cart-basket{
+  font-size:38px;
+  line-height:1;
+  filter:grayscale(1) brightness(10);
+}
+
+/* BRAND */
+
+.brand{
+  font-size:58px;
+  font-weight:900;
+  letter-spacing:-1.5px;
+  line-height:1;
+  margin-bottom:12px;
+}
+
+.uni{
+  color:var(--green);
+}
+
+.mart{
+  color:var(--orange);
+}
+
+/* TAGLINE */
+
+.tagline{
+  font-size:20px;
+  font-weight:700;
+  line-height:1.35;
+  color:var(--ink);
+}
+
+/* BUTTONS */
+
+.actions{
+  width:100%;
+  max-width:340px;
+  margin-top:auto;
+  padding-top:48px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:16px;
+}
+
+.get-started{
+  width:100%;
+  height:52px;
+  border-radius:30px;
+  background:var(--green);
+  color:#fff;
+  font-size:16px;
+  font-weight:800;
+  box-shadow:0 6px 16px rgba(11,90,58,.28);
+  transition:transform .15s ease;
+}
+
+.get-started:active{
+  transform:scale(.97);
+}
+
+.login-button{
+  background:none;
+  color:var(--green);
+  font-size:14px;
+  font-weight:700;
+  padding:6px 10px;
+}
+
+.get-started:focus-visible,
+.login-button:focus-visible{
+  outline:3px solid var(--orange);
+  outline-offset:3px;
+}
+
+@media (max-height:640px){
+  .welcome{
+    padding-top:36px;
+  }
+  .brand{
+    font-size:48px;
+  }
+}
