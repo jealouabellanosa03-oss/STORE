@@ -252,3 +252,877 @@ button{
     font-size:48px;
   }
 }
+/* =================================
+   HAMBURGER MENU BUTTON
+================================= */
+
+.menu-btn {
+    position: absolute;
+    top: 55px;
+    left: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+    z-index: 1000;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.menu-btn span {
+    display: block;
+
+    width: 23px;
+    height: 3px;
+
+    border-radius: 5px;
+
+    background: #3d5b35;
+
+    transition: 0.3s;
+}
+
+
+/* =================================
+   SIDE MENU
+================================= */
+
+.side-menu {
+    position: fixed;
+
+    top: 0;
+    left: -290px;
+
+    width: 270px;
+    height: 100%;
+
+    background: #fffaf3;
+
+    z-index: 2000;
+
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.2);
+
+    transition: left 0.3s ease;
+
+    overflow-y: auto;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+
+/* =================================
+   MENU HEADER
+================================= */
+
+.menu-header {
+    height: 90px;
+
+    background: #55784d;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 20px;
+}
+
+.menu-header h2 {
+    margin: 0;
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.close-menu {
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 34px;
+
+    cursor: pointer;
+
+    line-height: 1;
+}
+
+
+/* =================================
+   MENU CONTENT
+================================= */
+
+.menu-content {
+    padding: 20px 15px;
+}
+
+.menu-item {
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    border-radius: 12px;
+
+    color: #3d4f38;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    text-align: left;
+}
+
+.menu-item:hover {
+    background: #f3e4d5;
+}
+
+.menu-icon {
+    font-size: 23px;
+}
+
+
+/* =================================
+   OVERLAY
+================================= */
+
+.menu-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    z-index: 1500;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* =================================
+   ABOUT DEVELOPER MODAL
+================================= */
+
+.developer-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 3000;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+.developer-modal.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* =================================
+   DEVELOPER BOX
+================================= */
+
+.developer-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 360px;
+
+    background: #fffaf3;
+
+    border-radius: 24px;
+
+    padding: 30px 25px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(20px);
+
+    transition: 0.3s;
+}
+
+.developer-modal.active .developer-box {
+    transform: translateY(0);
+}
+
+
+.developer-close {
+    position: absolute;
+
+    top: 12px;
+    right: 16px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: #f3e4d5;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+
+    color: #555;
+
+    cursor: pointer;
+}
+
+
+.developer-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background: #e8f0df;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 36px;
+}
+
+
+.developer-box h2 {
+    margin: 5px 0;
+
+    color: #55784d;
+
+    font-size: 24px;
+}
+
+
+.developer-box h3 {
+    margin: 8px 0 15px;
+
+    color: #e78b45;
+
+    font-size: 20px;
+}
+
+
+.developer-box p {
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+.developer-info {
+    margin-top: 15px;
+
+    padding: 15px;
+
+    background: #f7eee4;
+
+    border-radius: 15px;
+
+    text-align: left;
+}
+
+.developer-info p {
+    margin: 8px 0;
+
+    font-size: 14px;
+}
+
+
+.done-btn {
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #55784d;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.done-btn:active {
+    transform: scale(0.98);
+}
+/* =================================
+   HAMBURGER MENU
+================================= */
+
+.menu-btn {
+    position: absolute;
+
+    /* MAS MATAAS NA POSITION */
+    top: 38px;
+    left: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+    z-index: 1000;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.menu-btn span {
+    display: block;
+
+    width: 23px;
+    height: 3px;
+
+    border-radius: 5px;
+
+    background: #3d5b35;
+}
+
+
+/* =================================
+   SIDE MENU
+================================= */
+
+.side-menu {
+    position: fixed;
+
+    top: 0;
+    left: -290px;
+
+    width: 270px;
+    height: 100%;
+
+    background: #fffaf3;
+
+    z-index: 2000;
+
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.2);
+
+    transition: left 0.3s ease;
+
+    overflow-y: auto;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+
+/* =================================
+   MENU HEADER
+================================= */
+
+.menu-header {
+    height: 90px;
+
+    background: #55784d;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+}
+
+.menu-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.close-menu {
+    border: none;
+    background: transparent;
+
+    color: white;
+
+    font-size: 34px;
+
+    cursor: pointer;
+}
+
+
+/* =================================
+   MENU ITEM
+================================= */
+
+.menu-content {
+    padding: 20px 15px;
+}
+
+.menu-item {
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    border-radius: 12px;
+
+    color: #3d4f38;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    text-align: left;
+}
+
+.menu-item:hover {
+    background: #f3e4d5;
+}
+
+.menu-icon {
+    font-size: 23px;
+}
+
+
+/* =================================
+   OVERLAY
+================================= */
+
+.menu-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    z-index: 1500;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =================================
+   DEVELOPER MODAL
+================================= */
+
+.developer-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 3000;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    overflow-y: auto;
+}
+
+.developer-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =================================
+   DEVELOPER BOX
+================================= */
+
+.developer-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 360px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #fffaf3;
+
+    border-radius: 24px;
+
+    padding: 28px 22px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(20px);
+
+    transition: 0.3s;
+}
+
+.developer-modal.active .developer-box {
+    transform: translateY(0);
+}
+
+
+/* =================================
+   CLOSE BUTTON
+================================= */
+
+.developer-close {
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: #f3e4d5;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+
+    color: #555;
+
+    cursor: pointer;
+}
+
+
+/* =================================
+   AVATAR
+================================= */
+
+.developer-avatar {
+    width: 90px;
+    height: 90px;
+
+    margin: 5px auto 12px;
+
+    border-radius: 50%;
+
+    background: #e8f0df;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+/* HEAD */
+
+.avatar-head {
+    position: absolute;
+
+    top: 15px;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #f2c7a5;
+
+    z-index: 2;
+}
+
+
+/* HAIR */
+
+.avatar-head::before {
+    content: "";
+
+    position: absolute;
+
+    top: -4px;
+    left: -2px;
+
+    width: 42px;
+    height: 22px;
+
+    border-radius: 50% 50% 35% 35%;
+
+    background: #4a3025;
+}
+
+
+/* BODY */
+
+.avatar-body {
+    width: 65px;
+    height: 40px;
+
+    border-radius: 35px 35px 0 0;
+
+    background: #55784d;
+
+    margin-bottom: -5px;
+}
+
+
+/* =================================
+   DEVELOPER NAME
+================================= */
+
+.developer-box h2 {
+    margin: 5px 0 2px;
+
+    color: #55784d;
+
+    font-size: 22px;
+}
+
+.developer-role {
+    margin: 0 0 18px;
+
+    color: #e78b45;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =================================
+   INFORMATION
+================================= */
+
+.developer-section {
+    margin-top: 15px;
+
+    padding: 14px;
+
+    background: #f7eee4;
+
+    border-radius: 15px;
+
+    text-align: left;
+}
+
+.info-row {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+.info-row:last-child {
+    margin-bottom: 0;
+}
+
+.info-icon {
+    font-size: 21px;
+}
+
+.info-row strong {
+    color: #55784d;
+
+    font-size: 14px;
+}
+
+.info-row p {
+    margin: 3px 0 0;
+
+    color: #555;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+/* =================================
+   SKILLS
+================================= */
+
+.developer-section h4 {
+    margin: 0 0 10px;
+
+    color: #55784d;
+
+    font-size: 15px;
+}
+
+.skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.skills span {
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background: #e8f0df;
+
+    color: #55784d;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =================================
+   KNOWLEDGE
+================================= */
+
+.knowledge-text {
+    margin: 0;
+
+    color: #555;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =================================
+   DONE BUTTON
+================================= */
+
+.done-btn {
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #55784d;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.done-btn:active {
+    transform: scale(0.98);
+}
